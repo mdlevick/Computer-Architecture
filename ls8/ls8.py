@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-
-"""Main."""
-
 import sys
 from cpu import CPU
 
-with open('./examples/mult.ls8') as program:
+try:
     cpu = CPU()
+    program = sys.argv[1]
     cpu.load(program)
     cpu.run()
+except IndexError:
+    print('You forgot to run the program')
