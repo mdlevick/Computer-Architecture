@@ -3,9 +3,9 @@
 """Main."""
 
 import sys
-from cpu import *
+from cpu import CPU
 
-cpu = CPU()
-
-cpu.load()
-cpu.run()
+with open('./examples/mult.ls8') as program:
+    cpu = CPU()
+    cpu.load(program)
+    cpu.run()
