@@ -8,4 +8,4 @@ try:
     cpu.load(program)
     cpu.run()
 except IndexError:
-    print('You forgot to run the program')
+    print('You forgot to run the argument')
