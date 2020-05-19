@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-
-"""Main."""
-
 import sys
-from cpu import *
+from cpu import CPU
 
-cpu = CPU()
-
-cpu.load()
-cpu.run()
+try:
+    cpu = CPU()
+    program = sys.argv[1]
+    cpu.load(program)
+    cpu.run()
+except IndexError:
+    print('You forgot to run the argument')
